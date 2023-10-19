@@ -1,0 +1,167 @@
+/* Estilizando o layout geral do formulário */
+.form-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilizando as seções do formulário */
+.form-section {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.form-section h2 {
+    font-size: 20px;
+    margin: 0 0 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Estilizando os campos de entrada e botões */
+.form-group {
+    margin: 10px 0;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+/* Estilizando tabelas */
+.table-container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Estilizando botões na tabela de anexos */
+button.excluirAnexo, button.visualizarAnexo {
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+button.excluirAnexo {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+button.visualizarAnexo {
+    background-color: #5bc0de;
+    color: #fff;
+}
+
+/* Estilo para o formulário */
+form {
+    font-family: Arial, sans-serif;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Estilo para os campos obrigatórios */
+input[required] {
+    border: 1px solid #ec5f5f; /* Borda vermelha para indicar campos obrigatórios */
+}
+
+/* Estilo para campos bloqueados */
+input[readonly] {
+    background-color: #f0f0f0; /* Cor de fundo cinza para campos bloqueados */
+}
+
+/* Estilo para tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+/* Estilo para células da tabela */
+table td, table th {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Estilo para botões Excluir e Visualizar */
+button.excluirAnexo, button.visualizarAnexo {
+    cursor: pointer;
+    margin-right: 5px;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+button.excluirAnexo {
+    background-color: #ff0000;
+}
+
+button.visualizarAnexo {
+    background-color: #008000;
+}
+
+/* Estilo para mensagens de erro */
+.error-message {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+/* Estilo para botões */
+button {
+    cursor: pointer;
+}
+
+/* Estilo para botões Adicionar */
+#adicionarLinhaProduto, #adicionarLinhaAnexo {
+    background-color: #008000;
+    color: #fff;
+}
+.titulo-azul {
+    background-color: blue; 
+    color: white; 
+    padding: 5px; 
+}
+.botao-verde {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario 2</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <script src="scripts/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<body>
+    <h1 style="text-align: center; padding-top: 50px;">Cadastro de Fornecedores e Produtos</h1>
+    <form id="cadastroForm">
+        <h2 class="titulo-azul">Dados do Fornecedor</h2>
+        <div>
+            <label for="razaoSocial">Razão Social *</label>
+            <input type="text" id="razaoSocial" required>
+        </div>
+        <div>
+            <label for="nomeFantasia">Nome Fantasia *</label>
+            <input type="text" id="nomeFantasia" required>
+        </div>
+        <div>
+            <label for="cnpj">CNPJ *</label>
+            <input type="text" id="cnpj" required>
+        </div>
+        <div>
+            <label for="inscricaoEstadual">Inscrição Estadual</label>
+            <input type="text" id="inscricaoEstadual">
+        </div>
+        <div>
+            <label for="inscricaoMunicipal">Inscrição Municipal</label>
+            <input type="text" id="inscricaoMunicipal">
+        </div>
+        <form method="get" action=".">
+            <label>Cep:
+            <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+                   onblur="pesquisacep(this.value);" /></label><br />
+            <label>Rua:
+            <input name="rua" type="text" id="rua" size="60" /></label><br />
+            <label>Bairro:
+            <input name="bairro" type="text" id="bairro" size="40" /></label><br />
+            <label>Cidade:
+            <input name="cidade" type="text" id="cidade" size="40" /></label><br />
+            <label>Estado:
+            <input name="uf" type="text" id="uf" size="2" /></label><br />
+        </form>
+        <div>
+            <label for="contato">Nome da Pessoa de Contato *</label>
+            <input type="text" id="contato" required>
+        </div>
+        <div>
+            <label for="telefone">Telefone *</label>
+            <input type="text" id="telefone" required>
+        </div>
+        <div>
+            <label for="email">E-mail *</label>
+            <input type="email" id="email" required>
+        </div>    
+        
+    <div class="table-container">
+        <h2 class="titulo-azul">Produtos</h2>
+        <table id="tabela-Produtos">
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                    <th>Unidade de Medida</th>
+                    <th>Quantidade em Estoque</th>
+                    <th>Valor Unitário</th>
+                    <th>Valor Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" name="descricaoProduto[]" value="Caneta Esferográfica"></td>
+                    <td><input type="text" name="unidadeMedida[]" value="Unidade"></td>
+                    <td><input type="number" name="quantidadeEstoque[]" value="500"></td>
+                    <td><input type="number" name="valorUnitario[]" value="1.00"></td>
+                    <td><input type="number" name="valorTotal[]" readonly></td>
+                    <td><button type="button" class="excluirProduto">Excluir</button></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="descricaoProduto[]" value="Teclado Mecânico para Jogos"></td>
+                    <td><input type="text" name="unidadeMedida[]" value="Unidade"></td>
+                    <td><input type="number" name="quantidadeEstoque[]" value="35"></td>
+                    <td><input type="number" name="valorUnitario[]" value="45.00"></td>
+                    <td><input type="number" name="valorTotal[]" readonly></td>
+                    <td><button type="button" class="excluirProduto">Excluir</button></td>
+                </tr>
+               
+            </tbody>
+        </table>
+        <button type="button" id="adicionar-Linha-Produto" class="botao-verde">Adicionar  Produto</button>
+    </div>
+
+    <div class="table-container">
+        <h2 class="titulo-azul">Anexos</h2>
+        <table id="tabelaAnexos">
+            <thead>
+                <tr>
+                    <th>Nome do Anexo</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" name="nomeAnexo[]"></td>
+                    <td>
+                        <button type="button" id="excluirAnexo" class="excluirAnexo" class="excluirAnexo">Excluir</button>
+                        <button type="button" id="visualizarAnexo" class="visualizarAnexo">Visualizar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" id="adicionarLinhaAnexo" class="botao-verde">Adicionar Anexo</button>
+    </div>
+    <button type="submit" class="botao-verde">Salvar Fornecedor</button>
+</html>
